@@ -611,17 +611,6 @@ body.nav-open {
   flex-shrink: 0;
 }
 
-.hero__portrait-frame::before {
-  content: "";
-  position: absolute;
-  top: var(--space-16);
-  right: calc(-1 * var(--space-16));
-  bottom: calc(-1 * var(--space-16));
-  left: var(--space-16);
-  border: var(--hairline) solid var(--color-accent);
-  border-radius: var(--radius-card);
-}
-
 .hero__portrait {
   position: relative;
   width: 100%;
