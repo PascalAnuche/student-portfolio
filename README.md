@@ -20,13 +20,6 @@ npx serve .
 
 or open the folder in VS Code with the Live Server extension.
 
-## Project docs
-
-- `PRD.md` — full functional spec and requirements checklist
-- `DESIGN-SYSTEM.md` — colour palette, typography, spacing, component styling
-- `BUILD-PROMPT.md` — the prompt used to generate this build with an AI coding assistant
-- `AGENTS.md` — conventions for any AI agent working in this repo
-- `RULES.md` — coding standards for HTML/CSS/JS/Git in this repo
 
 ## Deployment
 
