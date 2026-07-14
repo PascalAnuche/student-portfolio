@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Onyebuchi Anuche's academic planner — add, complete, and delete study tasks, saved in your browser with localStorage.">
+  <title>Academic Planner — Onyebuchi Anuche</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Lora:wght@600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+  <script src="js/planner.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__brand">Onyebuchi <span class="site-header__brand-accent">Anuche</span></a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Home</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="about.html">About</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="projects.html">Projects</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="planner.html" aria-current="page">Planner</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Stay organised</p>
+        <h1>Academic Planner</h1>
+        <p class="page-header__lead">
+          Keep track of assignments, labs, and reading. Tasks are saved in your browser
+          with localStorage, so they&rsquo;ll still be here when you come back.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <form id="task-form" class="planner-form">
+          <div class="planner-form__field">
+            <label class="field-label" for="task-input">Task</label>
+            <input class="field-input" id="task-input" name="task" type="text" placeholder="e.g. Revise CYB 102 past questions" autocomplete="off" maxlength="120">
+          </div>
+          <div class="planner-form__field planner-form__field--due">
+            <label class="field-label" for="task-due">Due date <span class="field-label__optional">(optional)</span></label>
+            <input class="field-input" id="task-due" name="due" type="date">
+          </div>
+          <button class="btn btn--primary" type="submit">Add task</button>
+        </form>
+
+        <p id="task-counter" class="planner__counter" aria-live="polite"></p>
+
+        <ul id="task-list" class="task-list"></ul>
+
+        <p id="planner-empty" class="planner__empty">
+          Nothing here yet — add your first task above. It&rsquo;s saved in this browser,
+          so it will still be waiting when you come back.
+        </p>
+
+        <p class="planner__hint">
+          Tip: press <kbd>Enter</kbd> to add a task and <kbd>Esc</kbd> to clear the
+          input. Tasks due within the next 48 hours get a gold marker.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__brand">Onyebuchi <span class="site-footer__brand-accent">Anuche</span></p>
+          <p class="site-footer__blurb">
+            Cybersecurity undergraduate at Miva Open University — building small,
+            useful, secure things for the web.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="site-footer__heading">Pages</p>
+          <ul class="site-footer__links">
+            <li><a class="site-footer__link" href="index.html">Home</a></li>
+            <li><a class="site-footer__link" href="about.html">About</a></li>
+            <li><a class="site-footer__link" href="projects.html">Projects</a></li>
+            <li><a class="site-footer__link" href="planner.html">Planner</a></li>
+            <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="site-footer__heading">Reach me</p>
+          <ul class="site-footer__links">
+            <li><a class="site-footer__link" href="mailto:onyebuchi.anuche@gmail.com">onyebuchi.anuche@gmail.com</a></li>
+            <li><a class="site-footer__link" href="tel:+2348012345678">+234 801 234 5678</a></li>
+          </ul>
+          <ul class="site-footer__social">
+            <li>
+              <a class="site-footer__social-link" href="https://github.com/onyebuchianuche" target="_blank" rel="noopener noreferrer" aria-label="Onyebuchi's GitHub profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__social-link" href="https://www.linkedin.com/in/onyebuchianuche" target="_blank" rel="noopener noreferrer" aria-label="Onyebuchi's LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v1a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__social-link" href="https://x.com/onyebuchianuche" target="_blank" rel="noopener noreferrer" aria-label="Onyebuchi's X (Twitter) profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__social-link" href="mailto:onyebuchi.anuche@gmail.com" aria-label="Email Onyebuchi">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">
+          &copy; 2026 Onyebuchi Anuche. Built by hand with HTML, CSS &amp; JavaScript for COS 106 — Introduction to Web Technologies.
+        </p>
+        <a class="site-footer__top-link" href="#top">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
