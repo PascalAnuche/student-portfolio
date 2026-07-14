@@ -30,8 +30,8 @@ or open the folder in VS Code with the Live Server extension.
 
 ## Deployment
 
-- **Live site:** https://onyebuchianuche.github.io/student-portfolio/ *(placeholder — replace with the real URL after enabling GitHub Pages)*
-- **Repository:** https://github.com/onyebuchianuche/student-portfolio *(placeholder — replace with the real repo URL after pushing)*
+- **Live site:** https://pascalanuche.github.io/student-portfolio/ *(goes live once GitHub Pages is enabled — see below)*
+- **Repository:** https://github.com/PascalAnuche/student-portfolio
 
 Recommended host: GitHub Pages (free, simplest for a static site like this) — enable it under repo Settings → Pages, pointing to the `main` branch root.
 
