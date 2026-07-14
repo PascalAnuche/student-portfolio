@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects by Onyebuchi Anuche — CampusEats, StudyCircle, and NairaWise, built with HTML, CSS, and vanilla JavaScript.">
+  <title>Projects — Onyebuchi Anuche</title>
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Lora:wght@600&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body id="top">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="site-header__brand">Onyebuchi <span class="site-header__brand-accent">Anuche</span></a>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open navigation menu">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+      <nav id="site-nav" class="site-nav" aria-label="Main navigation">
+        <ul class="site-nav__list">
+          <li class="site-nav__item"><a class="site-nav__link" href="index.html">Home</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="about.html">About</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="projects.html" aria-current="page">Projects</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="planner.html">Planner</a></li>
+          <li class="site-nav__item"><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <div class="nav-overlay"></div>
+
+  <main id="main-content">
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Selected work</p>
+        <h1>Projects</h1>
+        <p class="page-header__lead">
+          Things I&rsquo;ve designed and built — small tools that solve real problems
+          for students. Every one of them started as a complaint from a classmate.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="filter-bar" role="group" aria-label="Filter projects by technology">
+          <button type="button" class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="html-css" aria-pressed="false">HTML &amp; CSS</button>
+          <button type="button" class="filter-btn" data-filter="javascript" aria-pressed="false">JavaScript</button>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card" data-category="html-css">
+            <div class="project-card__media">
+              <img class="project-card__image" src="assets/images/project-campuseats.svg" alt="Screenshot placeholder for CampusEats, showing three vendor menu cards on a warm off-white layout">
+            </div>
+            <div class="project-card__body">
+              <h2 class="project-card__title">CampusEats</h2>
+              <p class="project-card__description">
+                A mobile-first menu site for the food vendors around my estate in Abuja.
+                Classmates and neighbours can check each vendor&rsquo;s daily menu and
+                prices before stepping out — the vendors update a simple shared sheet,
+                and the site reflects it. My first fully responsive build.
+              </p>
+              <ul class="project-card__tags">
+                <li class="tag">HTML5</li>
+                <li class="tag">CSS3</li>
+                <li class="tag">Flexbox</li>
+              </ul>
+              <div class="project-card__links">
+                <a class="project-card__link" href="https://onyebuchianuche.github.io/campuseats/" target="_blank" rel="noopener noreferrer">View project</a>
+                <a class="project-card__link" href="https://github.com/onyebuchianuche/campuseats" target="_blank" rel="noopener noreferrer">View code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="javascript">
+            <div class="project-card__media">
+              <img class="project-card__image" src="assets/images/project-studycircle.svg" alt="Screenshot placeholder for StudyCircle, showing a weekly schedule grid with highlighted study slots">
+            </div>
+            <div class="project-card__body">
+              <h2 class="project-card__title">StudyCircle</h2>
+              <p class="project-card__description">
+                A study-group scheduler for my online cohort at Miva. Create a group,
+                pick a weekly virtual meeting slot on the timetable grid, and track who
+                showed up. Group data persists in localStorage, and the clash-detection
+                logic taught me more about arrays than any lecture did.
+              </p>
+              <ul class="project-card__tags">
+                <li class="tag">JavaScript</li>
+                <li class="tag">localStorage</li>
+                <li class="tag">CSS Grid</li>
+              </ul>
+              <div class="project-card__links">
+                <a class="project-card__link" href="https://onyebuchianuche.github.io/studycircle/" target="_blank" rel="noopener noreferrer">View project</a>
+                <a class="project-card__link" href="https://github.com/onyebuchianuche/studycircle" target="_blank" rel="noopener noreferrer">View code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="javascript">
+            <div class="project-card__media">
+              <img class="project-card__image" src="assets/images/project-nairawise.svg" alt="Screenshot placeholder for NairaWise, showing a monthly spending bar chart and a naira balance card">
+            </div>
+            <div class="project-card__body">
+              <h2 class="project-card__title">NairaWise</h2>
+              <p class="project-card__description">
+                A pocket-money tracker built after I ran out of allowance in week two of
+                the semester — twice. Log spending by category, see a monthly summary,
+                and get a gentle warning when suya is eating your data-bundle budget.
+                All vanilla JavaScript and DOM manipulation.
+              </p>
+              <ul class="project-card__tags">
+                <li class="tag">JavaScript</li>
+                <li class="tag">DOM</li>
+                <li class="tag">localStorage</li>
+              </ul>
+              <div class="project-card__links">
+                <a class="project-card__link" href="https://onyebuchianuche.github.io/nairawise/" target="_blank" rel="noopener noreferrer">View project</a>
+                <a class="project-card__link" href="https://github.com/onyebuchianuche/nairawise" target="_blank" rel="noopener noreferrer">View code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div>
+          <p class="site-footer__brand">Onyebuchi <span class="site-footer__brand-accent">Anuche</span></p>
+          <p class="site-footer__blurb">
+            Cybersecurity undergraduate at Miva Open University — building small,
+            useful, secure things for the web.
+          </p>
+        </div>
+        <nav aria-label="Footer">
+          <p class="site-footer__heading">Pages</p>
+          <ul class="site-footer__links">
+            <li><a class="site-footer__link" href="index.html">Home</a></li>
+            <li><a class="site-footer__link" href="about.html">About</a></li>
+            <li><a class="site-footer__link" href="projects.html">Projects</a></li>
+            <li><a class="site-footer__link" href="planner.html">Planner</a></li>
+            <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="site-footer__heading">Reach me</p>
+          <ul class="site-footer__links">
+            <li><a class="site-footer__link" href="mailto:onyebuchi.anuche@gmail.com">onyebuchi.anuche@gmail.com</a></li>
+            <li><a class="site-footer__link" href="tel:+2348012345678">+234 801 234 5678</a></li>
+          </ul>
+          <ul class="site-footer__social">
+            <li>
+              <a class="site-footer__social-link" href="https://github.com/onyebuchianuche" target="_blank" rel="noopener noreferrer" aria-label="Onyebuchi's GitHub profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__social-link" href="https://www.linkedin.com/in/onyebuchianuche" target="_blank" rel="noopener noreferrer" aria-label="Onyebuchi's LinkedIn profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4V9h4v1a6 6 0 0 1 2-2z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__social-link" href="https://x.com/onyebuchianuche" target="_blank" rel="noopener noreferrer" aria-label="Onyebuchi's X (Twitter) profile">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/></svg>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__social-link" href="mailto:onyebuchi.anuche@gmail.com" aria-label="Email Onyebuchi">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">
+          &copy; 2026 Onyebuchi Anuche. Built by hand with HTML, CSS &amp; JavaScript for COS 106 — Introduction to Web Technologies.
+        </p>
+        <a class="site-footer__top-link" href="#top">Back to top &uarr;</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
